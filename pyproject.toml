@@ -5,7 +5,8 @@ description = "Advent of code 2021"
 authors = ["Mykolas Blažonis <mykolaas@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.8"
+numpy = "^1.21.4"
 advent-of-code-data = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
