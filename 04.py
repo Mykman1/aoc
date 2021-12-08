@@ -2,12 +2,12 @@ import numpy as np
 from aocd import get_data
 
 data = get_data(day=4)
-in_1 = data.split("\n\n")
+inp = data.split("\n\n")
 
-nums = [int(x) for x in in_1[0].split(",")]
+nums = [int(x) for x in inp[0].split(",")]
 bingos_int = [
     [int(y) for y in x.strip().replace("\n", " ").replace("  ", " ").split(" ")]
-    for x in in_1[1:]
+    for x in inp[1:]
 ]
 games = len(bingos_int)
 
@@ -25,12 +25,10 @@ try:
 except StopIteration:
     pass
 
-in_2 = in_1
-
-nums = [int(x) for x in in_1[0].split(",")]
+nums = [int(x) for x in inp[0].split(",")]
 bingos_int = [
     [int(y) for y in x.strip().replace("\n", " ").replace("  ", " ").split(" ")]
-    for x in in_1[1:]
+    for x in inp[1:]
 ]
 games = len(bingos_int)
 

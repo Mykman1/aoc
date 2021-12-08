@@ -3,9 +3,9 @@ from collections import Counter
 from aocd import get_data
 
 data = get_data(day=6)
-in_1 = [int(x) for x in data.split(",")]
+inp = [int(x) for x in data.split(",")]
 
-cnt = Counter(in_1)
+cnt = Counter(inp)
 
 for i in range(80):
     c0 = cnt[0]
@@ -18,9 +18,7 @@ for i in range(80):
 
 print(sum([v for k, v in cnt.items()]))
 
-in_2 = in_1
-
-cnt = Counter(in_2)
+cnt = Counter(inp)
 
 for i in range(256):
     c0 = cnt[0]

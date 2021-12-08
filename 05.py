@@ -2,11 +2,11 @@ import numpy as np
 from aocd import get_data
 
 data = get_data(day=5)
-in_1 = data.split("\n")
+inp = data.split("\n")
 
 proc = [
     [tuple([int(z) for z in y.split(",")]) for y in x.split(" -> ")]
-    for x in in_1
+    for x in inp
 ]
 
 lines = np.zeros((len(proc), 1000, 1000), dtype=int)
@@ -26,11 +26,9 @@ for i in range(len(proc)):
 
 print(sum(sum(sum(lines) >= 2)))
 
-in_2 = in_1
-
 proc = [
     [tuple([int(z) for z in y.split(",")]) for y in x.split(" -> ")]
-    for x in in_2
+    for x in inp
 ]
 
 lines = np.zeros((len(proc), 1000, 1000), dtype=int)

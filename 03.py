@@ -1,10 +1,10 @@
 from aocd import get_data
 
 data = get_data(day=3)
-in_1 = data.split("\n")
+inp = data.split("\n")
 
 y = []
-for x in in_1:
+for x in inp:
     y.append([int(z) for z in x])
 
 rot = [x for x in zip(*y)]
@@ -21,10 +21,8 @@ for b in eps_bin:
 
 print(gamma * eps)
 
-in_2 = in_1
-
 y = []
-for x in in_2:
+for x in inp:
     y.append([int(z) for z in x])
 
 rot = [list(x) for x in zip(*y)]
@@ -48,7 +46,7 @@ for b in ox_bin:
 
 
 y = []
-for x in in_2:
+for x in inp:
     y.append([int(z) for z in x])
 
 rot = [list(x) for x in zip(*y)]

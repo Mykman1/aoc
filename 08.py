@@ -3,11 +3,9 @@ from collections import Counter
 from aocd import get_data
 
 data = get_data(day=8)
-in_1 = [[y.split(" ") for y in x.split(" | ")] for x in data.split("\n")]
+inp = [[y.split(" ") for y in x.split(" | ")] for x in data.split("\n")]
 
-print(len([y for x in in_1 for y in x[1] if len(y) in (2, 3, 4, 7)]))
-
-in_2 = in_1
+print(len([y for x in inp for y in x[1] if len(y) in (2, 3, 4, 7)]))
 
 decoded_int_map = {
     "abcefg": 0,
@@ -23,7 +21,7 @@ decoded_int_map = {
 }
 
 out = []
-for x in in_2:
+for x in inp:
     cnt = Counter([z for y in x[0] for z in y])
     decode_map = {}
     decode_map[[x[0] for x in cnt.items() if x[1] == 6][0]] = "b"
