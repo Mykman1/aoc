@@ -44,4 +44,4 @@ for i in range(len(proc)):
     for s in range(ln):
         lines[i, ax + s * dir_x, ay + s * dir_y] = 1
 
-print(sum(sum(sum(lines) >= 2)))
+print(np.sum(sum(lines) >= 2))
