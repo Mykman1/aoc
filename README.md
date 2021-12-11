@@ -1,4 +1,6 @@
-# aoc2021
+# My solutions for Advent of Code 2021
+
+Advent of code link - https://adventofcode.com/2021
 
 Requirements:
 * `poetry` (https://python-poetry.org/docs/#installation)
