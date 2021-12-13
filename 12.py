@@ -1,4 +1,4 @@
-from collections import Counter, defaultdict, deque
+from collections import defaultdict, deque
 from copy import deepcopy as dc
 
 from aocd import get_data
