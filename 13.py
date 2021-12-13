@@ -40,7 +40,7 @@ for r in range(len(folds)):
     else:
         paper = paper[: folds[r][1], :]
 
-chars = {True: "#", False: "."}
+chars = {True: "##", False: "  "}
 
 
 for row in paper:

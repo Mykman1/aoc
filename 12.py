@@ -17,7 +17,7 @@ for row in inp:
 
 
 def find_paths(node, found_paths, path):
-    if node == node.lower():
+    if node.islower():
         if path.count(node) > 1:
             path.pop()
             return found_paths, path
@@ -38,7 +38,7 @@ print(len(out))
 
 
 def find_paths_2(node, found_paths, path):
-    if node == node.lower():
+    if node.islower():
         if path.count(node) > 1:
             if path[0] == "X":
                 path.pop()
@@ -54,7 +54,7 @@ def find_paths_2(node, found_paths, path):
         found_paths, path = find_paths_2(nbr, found_paths, path)
     pc = path.count(node)
     path.pop()
-    if node == node.lower() and pc == 2:
+    if node.islower() and pc == 2:
         path.popleft()
     return found_paths, path
 
