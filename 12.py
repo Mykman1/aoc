@@ -1,5 +1,4 @@
 from collections import defaultdict, deque
-from copy import deepcopy as dc
 
 from aocd import get_data
 
@@ -26,7 +25,7 @@ def find_paths(node, found_paths, path):
         found_paths.append(path.copy())
         path.pop()
         return found_paths, path
-    for nbr in dc(list(nbrs_orig[node])):
+    for nbr in nbrs_orig[node]:
         path.append(nbr)
         found_paths, path = find_paths(nbr, found_paths, path)
     path.pop()
@@ -50,7 +49,7 @@ def find_paths_2(node, found_paths, path):
         found_paths.append(path.copy())
         path.pop()
         return found_paths, path
-    for nbr in dc(list(nbrs_orig[node])):
+    for nbr in nbrs_orig[node]:
         path.append(nbr)
         found_paths, path = find_paths_2(nbr, found_paths, path)
     pc = path.count(node)
