@@ -2,7 +2,6 @@ import re
 from math import ceil, floor
 
 from aocd import get_data
-from requests.api import get
 
 data = get_data(day=18)
 
