@@ -54,12 +54,12 @@ while len(scanners_multi) > 0:
                 centers_abs = np.einsum(
                     "ri,jx->rjix",
                     np.ones(X.shape[0:2], dtype=int),
-                    X_0_abs,
+                    X_0_abs[11:],
                     optimize="greedy",
                 ) - np.einsum(
                     "rix,j->rjix",
                     X,
-                    np.ones(X_0_abs.shape[0], dtype=int),
+                    np.ones(X_0_abs[11:].shape[0], dtype=int),
                     optimize="greedy",
                 )
                 centers_abs = centers_abs.reshape(

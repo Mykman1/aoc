@@ -50,7 +50,7 @@ while len(scanners) > 0:
                 X = np.dot(scanners[i], r)
                 for X_0_abs in abs_scanners:
                     for p in X:
-                        for p_0_abs in X_0_abs:
+                        for p_0_abs in X_0_abs[11:]:
                             center = p_0_abs - p
                             X_abs = X + center
                             common_pts = set(map(tuple, X_0_abs)).intersection(
