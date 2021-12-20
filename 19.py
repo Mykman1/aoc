@@ -1,5 +1,3 @@
-from collections import Counter
-
 import numpy as np
 from aocd import get_data
 
