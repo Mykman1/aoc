@@ -28,6 +28,9 @@ pts = [0, 0]
 rolls = 0
 universes = [Counter()]
 universes[0][tuple(inp + pts)] = 1
+cts = Counter(
+    [x + y + z for x in [1, 2, 3] for y in [1, 2, 3] for z in [1, 2, 3]]
+)
 while True:
     new_universes = Counter()
     if len(universes[rolls].keys()) == 0:
@@ -37,21 +40,30 @@ while True:
         pts = list(k[2:])
         if max(pts) >= 21:
             continue
-        whose_turn = rolls % 2
-        cur_pos[whose_turn] = [
-            (cur_pos[whose_turn] + x + y + z - 1) % 10 + 1
-            for x in [1, 2, 3]
-            for y in [1, 2, 3]
-            for z in [1, 2, 3]
-        ]
-        cur_pos[1 - whose_turn] = [cur_pos[1 - whose_turn]]
-        pts[whose_turn] = [pts[whose_turn] + x for x in cur_pos[whose_turn]]
-        pts[1 - whose_turn] = [pts[1 - whose_turn]]
-        for i in range(len(cur_pos[0])):
-            for j in range(len(cur_pos[1])):
+        if rolls % 2:
+            for pt, t in cts.items():
                 new_universes[
-                    (cur_pos[0][i], cur_pos[1][j], pts[0][i], pts[1][j])
-                ] += universes[rolls][k]
+                    (
+                        cur_pos[0],
+                        (cur_pos[1] + pt - 1) % 10 + 1,
+                        pts[0],
+                        pts[1] + (cur_pos[1] + pt - 1) % 10 + 1,
+                    )
+                ] += (
+                    universes[rolls][k] * t
+                )
+        else:
+            for pt, t in cts.items():
+                new_universes[
+                    (
+                        (cur_pos[0] + pt - 1) % 10 + 1,
+                        cur_pos[1],
+                        pts[0] + (cur_pos[0] + pt - 1) % 10 + 1,
+                        pts[1],
+                    )
+                ] += (
+                    universes[rolls][k] * t
+                )
     universes.append(new_universes)
     rolls += 1
 
