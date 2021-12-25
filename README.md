@@ -3,7 +3,7 @@
 Advent of code link - https://adventofcode.com/2021
 
 Requirements:
-* `poetry` (https://python-poetry.org/docs/#installation)
+* `poetry` (https://python-poetry.org/docs/master/#installing-with-the-official-installer)
 * `make` (I used `sudo apt install make`)
 
 How to use:
