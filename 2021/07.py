@@ -2,7 +2,7 @@ from collections import Counter
 
 from aocd import get_data
 
-data = get_data(day=7)
+data = get_data(year=2021, day=7)
 inp = [int(x) for x in data.split(",")]
 
 cnt = Counter()

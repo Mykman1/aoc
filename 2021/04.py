@@ -1,7 +1,7 @@
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=4)
+data = get_data(year=2021, day=4)
 inp = data.split("\n\n")
 
 nums = [int(x) for x in inp[0].split(",")]

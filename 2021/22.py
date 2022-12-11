@@ -4,7 +4,7 @@ from collections import Counter
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=22)
+data = get_data(year=2021, day=22)
 
 inp = [
     re.search(

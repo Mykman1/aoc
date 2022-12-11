@@ -1,6 +1,6 @@
 from aocd import get_data
 
-data = get_data(day=2)
+data = get_data(year=2021, day=2)
 inp = data.split("\n")
 
 dir_dict = {"up": (0, -1), "down": (0, 1), "forward": (1, 0)}

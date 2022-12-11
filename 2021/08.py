@@ -2,7 +2,7 @@ from collections import Counter
 
 from aocd import get_data
 
-data = get_data(day=8)
+data = get_data(year=2021, day=8)
 inp = [[y.split(" ") for y in x.split(" | ")] for x in data.split("\n")]
 
 print(len([y for x in inp for y in x[1] if len(y) in (2, 3, 4, 7)]))

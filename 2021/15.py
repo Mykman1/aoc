@@ -1,7 +1,7 @@
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=15)
+data = get_data(year=2021, day=15)
 
 inp = np.array([[int(y) for y in x] for x in data.split("\n")])
 max_risk = 10 * inp.shape[0] * inp.shape[1]

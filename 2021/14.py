@@ -2,7 +2,7 @@ from collections import Counter
 
 from aocd import get_data
 
-data = get_data(day=14)
+data = get_data(year=2021, day=14)
 
 inp, maps = data.split("\n\n")
 maps = {x.split(" -> ")[0]: x.split(" -> ")[1] for x in maps.split("\n")}

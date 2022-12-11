@@ -1,7 +1,7 @@
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=13)
+data = get_data(year=2021, day=13)
 
 inp, folds = data.split("\n\n")
 inp = [tuple(int(y) for y in x.split(",")) for x in inp.split("\n")]

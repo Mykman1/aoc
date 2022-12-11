@@ -3,7 +3,7 @@ from math import prod
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=9)
+data = get_data(year=2021, day=9)
 
 inp = np.array([[int(y) + 1 for y in x] for x in data.split("\n")])
 

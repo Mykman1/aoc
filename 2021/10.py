@@ -1,6 +1,6 @@
 from aocd import get_data
 
-data = get_data(day=10)
+data = get_data(year=2021, day=10)
 
 inp = data.split("\n")
 

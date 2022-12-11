@@ -2,7 +2,7 @@ from math import prod
 
 from aocd import get_data
 
-data = get_data(day=16)
+data = get_data(year=2021, day=16)
 
 inp = bin(int("0x" + data, 16))[2:].zfill(4 * len(data))
 

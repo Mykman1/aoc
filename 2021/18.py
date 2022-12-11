@@ -3,7 +3,7 @@ from math import ceil, floor
 
 from aocd import get_data
 
-data = get_data(day=18)
+data = get_data(year=2021, day=18)
 
 inp = data.split("\n")
 

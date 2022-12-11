@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "aoc2021"
+name = "aoc"
 version = "0.1.0"
-description = "Advent of code 2021"
+description = "Advent of code solutions"
 authors = ["Mykolas Blažonis <mykolaas@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "3.8"
+python = "3.8.10"
 numpy = "^1.21.4"
 advent-of-code-data = "^1.1.1"
 

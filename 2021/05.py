@@ -1,7 +1,7 @@
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=5)
+data = get_data(year=2021, day=5)
 inp = data.split("\n")
 
 proc = [

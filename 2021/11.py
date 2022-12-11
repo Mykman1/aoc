@@ -1,7 +1,7 @@
 import numpy as np
 from aocd import get_data
 
-data = get_data(day=11)
+data = get_data(year=2021, day=11)
 
 inp = np.array([[int(x) for x in y] for y in data.split("\n")])
 

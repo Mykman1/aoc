@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 
 from aocd import get_data
 
-data = get_data(day=12)
+data = get_data(year=2021, day=12)
 
 inp = data.split("\n")
 

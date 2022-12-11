@@ -1,6 +1,6 @@
 from aocd import get_data
 
-data = get_data(day=17)
+data = get_data(year=2021, day=17)
 
 inp = [
     [int(y) for y in x.split("..")]
