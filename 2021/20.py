@@ -13,7 +13,7 @@ init = np.array(
         for x in inp[1].replace("#", "1").replace(".", "0").split("\n")
     ]
 )
-mask = np.array([2 ** x for x in range(8, -1, -1)]).reshape((3, 3))
+mask = np.array([2**x for x in range(8, -1, -1)]).reshape((3, 3))
 
 first_last = [algo[0], algo[-1]]
 cur_bounds = 0
